@@ -3,10 +3,10 @@ FROM debian:stable-slim
 EXPOSE 80/udp
 EXPOSE 80/tcp
 RUN apt-get update && apt-get install -y wget unzip bash
-RUN wget https://github.com/thepeacockproject/Peacock/releases/download/v5.7.1/Peacock-v5.7.1.zip \
-&& unzip Peacock-v5.7.1.zip \
-&& mv Peacock-v5.7.1/ Peacock/ \
-&& rm Peacock-v5.7.1.zip \
+RUN wget -O Peacock.zip https://github.com/thepeacockproject/Peacock/releases/download/v6.0.0-beta.2/Peacock-v6.0.0-beta.2.zip \
+&& unzip Peacock.zip \
+&& rm Peacock.zip \
+&& mv Peacock-v6.0.0-beta.2/ Peacock/ \
 && rm -r Peacock/nodedist \
 && wget -O node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz \
 && tar -xzf node.tar.gz --directory Peacock \

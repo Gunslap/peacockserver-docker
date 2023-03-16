@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y wget unzip bash
 RUN wget -O Peacock.zip https://github.com/thepeacockproject/Peacock/releases/download/v6.0.0-beta.3/Peacock-v6.0.0-beta.3.zip \
 && unzip Peacock.zip \
 && rm Peacock.zip \
-&& mv Peacock-v6.0.0-beta.2/ Peacock/ \
+&& mv Peacock-v6.0.0-beta.3/ Peacock/ \
 && rm -r Peacock/nodedist \
 && wget -O node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz \
 && tar -xzf node.tar.gz --directory Peacock \

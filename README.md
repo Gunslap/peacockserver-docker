@@ -10,4 +10,4 @@ The directories /Peacock/userdata and /Peacock/contractSessions are mounted as v
 
 ## Files Used
 - https://api.github.com/repos/thepeacockproject/Peacock/releases/latest
-- https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+- https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-x64.tar.gz

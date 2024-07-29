@@ -4,14 +4,13 @@ EXPOSE 80/udp
 EXPOSE 80/tcp
 RUN apt-get update && apt-get install -y wget unzip bash curl
 RUN curl -s https://api.github.com/repos/thepeacockproject/Peacock/releases/latest \
-    | grep "browser_download_url.*zip" | grep -v "lite"\
+    | grep "browser_download_url.*zip" | grep -E "linux"\
     | cut -d : -f 2,3 \
     | tr -d \" \
     | wget -q -O Peacock.zip -i -
 RUN unzip -q Peacock.zip \
     && rm Peacock.zip \
     && mv Peacock-* Peacock/ \
-    && rm -r Peacock/nodedist \
     && wget -q -O node.tar.gz https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-x64.tar.gz \
     && tar -xzf node.tar.gz --directory Peacock \
     && mv ./Peacock/node-v18.18.2-linux-x64 ./Peacock/node \

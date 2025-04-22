@@ -11,9 +11,9 @@ RUN curl -s https://api.github.com/repos/thepeacockproject/Peacock/releases/late
 RUN unzip -q Peacock.zip \
     && rm Peacock.zip \
     && mv Peacock-* Peacock/ \
-    && wget -q -O node.tar.gz https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-x64.tar.gz \
+    && wget -q -O node.tar.gz https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-x64.tar.xz \
     && tar -xzf node.tar.gz --directory Peacock \
-    && mv ./Peacock/node-v18.18.2-linux-x64 ./Peacock/node \
+    && mv ./Peacock/node-v22.9.0-linux-x64 ./Peacock/node \
     && rm node.tar.gz
 WORKDIR /Peacock
 RUN mkdir {userdata,contractSessions}
@@ -23,3 +23,4 @@ CMD ["./start_server.sh"]
 
 VOLUME /Peacock/userdata
 VOLUME /Peacock/contractSessions
+VOLUME /Peacock/plugins

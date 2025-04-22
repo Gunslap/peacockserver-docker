@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  peacockserver:
+    container_name: PeacockServer
+    image: gunslap/peacockserver:latest
+    ports:
+      - "4700:80"
+    networks:
+      - bridge
+    volumes:
+      - userdata:/Peacock/userdata
+      - contractSessions:/Peacock/contractSessions
+      - plugins:/Peacock/plugins
+
+networks:
+  bridge:
+    driver: bridge
+
+volumes:
+  userdata:
+  contractSessions:
+  plugins:

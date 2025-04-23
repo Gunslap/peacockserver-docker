@@ -6,7 +6,7 @@ This is a quick and dirty Docker Container for the [Peacock Project HITMAN Serve
 -On your local machine run the PeacockPatcher.exe and point it to the external IP/Port the Docker image is running on  
 -Launch the game and play!  
 
-The directories /Peacock/userdata, /Peacock/contractSessions, and /Peacock/pluginsprobabl are mounted as volumes so you can save your progress
+The directories /Peacock/userdata, /Peacock/contractSessions, and /Peacock/plugins are mounted as volumes so you can save your progress
 
 ## Files Used
 - https://api.github.com/repos/thepeacockproject/Peacock/releases/latest  
